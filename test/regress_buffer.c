@@ -892,7 +892,6 @@ test_evbuffer_file_segment_add_cleanup_cb(void* ptr)
 	char const* arg = "token";
 
 	fd = regress_make_tmpfile("file_segment_test_file", 22, &tmpfilename);
-	tt_int_op(fd, >=, 0);
 
 	evb = evbuffer_new();
 	tt_assert(evb);
@@ -2000,7 +1999,7 @@ test_evbuffer_freeze(void *ptr)
 	FREEZE_EQ(r, 0, -1);
 	r = evbuffer_reserve_space(buf, 10, v, 1);
 	FREEZE_EQ(r, 1, -1);
-	if (r == 1) {
+	if (r == 0) {
 		memset(v[0].iov_base, 'X', 10);
 		v[0].iov_len = 10;
 	}
