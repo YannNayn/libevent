@@ -12,7 +12,7 @@ SSL_LIBS=
 
 CFLAGS=/I.. /I../WIN32-Code /I../include /I../compat /DHAVE_CONFIG_H /DTINYTEST_LOCAL $(SSL_CFLAGS)
 
-CFLAGS=$(CFLAGS) /Ox /W3 /wd4996 /nologo
+CFLAGS=$(CFLAGS) /Ox /W3 /wd4996 /nologo /MD
 
 REGRESS_OBJS=regress.obj regress_buffer.obj regress_http.obj regress_dns.obj \
 	regress_testutils.obj \
