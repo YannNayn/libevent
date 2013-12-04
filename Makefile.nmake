@@ -20,10 +20,10 @@ SSL_CFLAGS=
 !ENDIF
 
 # Needed for correctness
-CFLAGS=/IWIN32-Code /Iinclude /Icompat /DHAVE_CONFIG_H /I. $(SSL_CFLAGS) /MD
+CFLAGS=/IWIN32-Code /Iinclude /Icompat /DHAVE_CONFIG_H /I. $(SSL_CFLAGS)
 
 # For optimization and warnings
-CFLAGS=$(CFLAGS) /Ox /W3 /wd4996 /nologo
+CFLAGS=$(CFLAGS) /Ox /W3 /wd4996 /nologo /MD
 
 # XXXX have a debug mode
 
